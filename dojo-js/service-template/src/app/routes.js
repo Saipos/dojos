@@ -14,4 +14,10 @@ routes.get('/', Main.get)
 
 routes.get('/catalogs/theaters/:threaterId', Catalogs.getTheatersById)
 
+routes.post('/catalogs/movies', Catalogs.createMovie)
+
+routes.post('/catalogs/status/:idStatus', Catalogs.updateMovieStatus)
+
+routes.delete('/catalogs/movies/:idMovie', Catalogs.deleteMovie)
+
 module.exports = routes
